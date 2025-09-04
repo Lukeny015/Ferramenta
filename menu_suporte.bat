@@ -1,14 +1,10 @@
-@echo off
-title MENU DE SUPORTE E REPARO - FUNESA
-color 0A
-
 
 @echo off
 :MENU
 cls
 echo ==============================================
-echo         MENU DO SUPORTE TECNICO - FUNESA
-echo              por Pablo Oliveira - V1.0
+echo         MENU DO SUPORTE TECNICO - Solution
+echo              por Lukeny Dala - V1.0
 echo ==============================================
 echo.
 
@@ -33,7 +29,8 @@ echo 18. Testar Velocidade de Disco
 echo 19. Criar Ponto de Restauracao
 echo 20. Executar Comando Personalizado (CMD)
 echo 21. Atualizar Todos os Programas (Winget Update)
-echo 22. Sair
+echo 22. Ip configurações
+echo 23. Sair
 echo ==============================================
 set /p opcao=Escolha uma opcao (1-22): 
 
@@ -58,7 +55,8 @@ if "%opcao%"=="18" winsat disk
 if "%opcao%"=="19" powershell -Command "Checkpoint-Computer -Description 'Ponto de Restauracao Manual'"
 if "%opcao%"=="20" cmd
 if "%opcao%"=="21" winget update --all
-if "%opcao%"=="22" exit
+if "%opcao%"=="22" ipconfig
+if "%opcao%"=="23" exit
 
 pause
-goto MENU
+goto MENU 
